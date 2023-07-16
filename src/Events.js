@@ -1,20 +1,21 @@
 import React from 'react';
 import './App.css';
+import style from './event.module.css';
 
+
+//The App components state data gets passed to Events component, which takes in set of input called props
 const Events = (props) =>{
-    
     return(
-        
         <div className="event">
-            <ul className="list">
-                {props.events.map((event, index) => {
+            <ul className="list"> 
+                {props.events.map((event, index) => { //use index as key since list items don't have unique identifiers
 
-                let year;
+                let year = "";
                 let month = "";
                 let day = "";
 
-                if (event.year < 0) {
-                    year = Math.abs(event.year) + ' BC';
+                if (event.year < 0) { //negative years means BC in the API
+                    year = Math.abs(event.year) + ' BC'; 
 
                 } 
                 else {
@@ -22,6 +23,7 @@ const Events = (props) =>{
 
                 }
 
+                //change month ints to strings
                 if (event.month == 1){
                     month = 'January';
                 }
@@ -59,6 +61,7 @@ const Events = (props) =>{
                     month = 'December';
                 }
 
+                //change 03 to just 3, 08 to just 8, etc
                 if(event.day == 1){
                     day = '1';
                 }
@@ -90,8 +93,6 @@ const Events = (props) =>{
                     day = event.day;
                 }
 
-
-
                 const formattedDate = `${month} ${day}, ${year}`;
 
                 return (
@@ -102,6 +103,7 @@ const Events = (props) =>{
                     </li>
                 );
                 })}
+
             </ul>
     </div>
         
