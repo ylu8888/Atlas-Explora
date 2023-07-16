@@ -18,7 +18,7 @@ const Events = (props) =>{
 
                 } 
                 else {
-                    year = event.year;
+                    year = event.year + ' AD';
 
                 }
 
@@ -96,7 +96,7 @@ const Events = (props) =>{
 
                 return (
                     <li key={index} className="listitem">
-                    <p className="dates">Date: {formattedDate}</p>
+                    <p className="dates">{formattedDate}</p>
                     {event.event}
 
                     </li>
