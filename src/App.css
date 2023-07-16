@@ -4,7 +4,7 @@
   background-image: url(atlasexplora.jpg);
   background-size: cover; 
   background-position: center; 
-  color: white;
+  
 
 }
 
@@ -13,40 +13,45 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-transform: capitalize;
+  padding-top: 0px;
   
 }
 
 .search-bar{
-  width: 450px;
-  height: 25px;
+  width: 400px;
+  height: 20px;
   border: none;
   padding: 10px;
-  font-size: 16px;
+  font-size: 18px;
   border-radius: 18px 0 0 18px;
-  border: 2px solid #8e76c6;
+  border: 1.5px solid #3e1993;
   text-align: center;
   outline: none;
+  font-family: 'Times New Roman';
+
   
 }
 
 .search-btn{
-  background-color: #a58ddc;
+  background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
   border: none;
   padding: 10px 20px;
   color: black;
-  height: 48px;
+  height: 42px;
   border-radius: 0 18px 18px 0;
-  border: 2px solid #8e76c6;
+  border: 1.5px solid #3e1993;
   width: 80px;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 13px;
+  font-family: 'Audiowide', cursive;
 }
 
 button:hover {
-  background-color: rgb(221, 164, 235);
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
 }
 
@@ -54,6 +59,6 @@ button:hover {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  font-size: 20px;
+  font-size: 19px;
   
 }

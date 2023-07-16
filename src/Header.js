@@ -7,6 +7,7 @@ const Header = () => {
             
              <div className={style.logo}> ATLAS EXPLORA </div>
              <div className={style.about}>Travel back in time to explore a plethora of historical events and famous figures</div>
+             <div className={style.about}>Enter an event, figure, location, or date (mm/dd/yyyy)</div>
         
         </div>
        

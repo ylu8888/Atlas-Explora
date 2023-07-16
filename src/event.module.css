@@ -10,8 +10,12 @@
     align-items: center;
     min-width: 50%;
     flex-wrap: wrap;
+    color: white;
     font-family: Times New Roman;
+
 }
+
+
 
 .header{
     display: flex;
@@ -19,18 +23,25 @@
     justify-content: center;
     flex-direction: column;
     padding-top: 20px;
-
+    margin-bottom: -8px;
+    
 }
 
 .logo{
-  font-size: 40px;
+  font-size: 50px;
   font-family: 'Audiowide', cursive;
+  color: white;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
   
     
 }
 
 .about{
     font-size: 20px;
-    font-family: Times New Roman;
+    font-family: 'Times New Roman';
+    color: white;
 }
 
