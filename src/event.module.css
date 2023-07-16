@@ -1,6 +1,7 @@
+
+
 .event{
     border-radius: 10px;
-    font-family: Times New Roman;
     display: flex;
     flex-direction: column;
     justify-content: space-around; 
@@ -9,8 +10,27 @@
     align-items: center;
     min-width: 50%;
     flex-wrap: wrap;
+    font-family: Times New Roman;
 }
 
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
 
+}
 
+.logo{
+  font-size: 40px;
+  font-family: 'Audiowide', cursive;
   
+    
+}
+
+.about{
+    font-size: 20px;
+    font-family: Times New Roman;
+}
+

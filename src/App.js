@@ -1,6 +1,7 @@
 import React,{useEffect, useState} from "react";
 import axios from 'axios';
 import Events from './Events';
+import Header from './Header';
 import './App.css';
 
 const App = () => {
@@ -82,6 +83,8 @@ const App = () => {
   return(
 
     <div className="App">
+
+      <Header/>
 
       <form className="search-form" onSubmit={getSearch}>
         <input value={search} onChange={updateSearch} className="search-bar" type="text" placeholder="Enter an event, figure, or date (mm/dd/yyyy)"/>

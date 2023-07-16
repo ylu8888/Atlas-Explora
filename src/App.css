@@ -1,10 +1,11 @@
+
 .App{
   min-height: 100vh;
-  font-family: Times New Roman;
   background-image: url(atlasexplora.jpg);
   background-size: cover; 
   background-position: center; 
   color: white;
+
 }
 
 .search-form{
