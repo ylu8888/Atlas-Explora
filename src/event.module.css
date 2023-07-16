@@ -1,0 +1,13 @@
+.event{
+    border-radius: 10px;
+    font-family: Times New Roman;
+    box-shadow: 0px 5px 20px rgb(71, 67, 67);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    background: white;
+    align-items: center;
+    min-width: 50%;
+    flex-wrap: wrap;
+}
