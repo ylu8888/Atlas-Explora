@@ -20,10 +20,10 @@ const App = () => {
 
       let apiUrl = '';
       let intQuery = 0;
-      const hasComma = query.includes(','); //if query has comma, its a formatted date
+      const isDate = query.includes('/'); //if query has forward slash, its a formatted date
 
-     if(hasComma){ 
-        const parts = query.replace(/\s/g, "").split(","); //remove whitespace and other chars, split string between commas
+     if(isDate){ 
+        const parts = query.replace(/\s/g, "").split("/"); //remove whitespace and other chars, split string between commas
         const dateArray = parts.map(part => parseInt(part)); //each part is mapped onto date array for ex [ 3, 15, -44]
 
         console.log(dateArray);
