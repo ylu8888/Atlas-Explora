@@ -6,8 +6,8 @@ import style from './event.module.css';
 //The App components state data gets passed to Events component, which takes in set of input called props
 const Events = (props) =>{
     return(
-        <div className="event">
-            <ul className="list"> 
+        <div className={style.event}>
+            <ul className={style.list}> 
                 {props.events.map((event, index) => { //use index as key since list items don't have unique identifiers
 
                 let year = "";
@@ -96,8 +96,8 @@ const Events = (props) =>{
                 const formattedDate = `${month} ${day}, ${year}`;
 
                 return (
-                    <li key={index} className="listitem">
-                    <p className="dates">{formattedDate}</p>
+                    <li key={index} className={style.listitem}>
+                    <p className={style.dates}>{formattedDate}</p>
                     {event.event}
 
                     </li>

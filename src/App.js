@@ -7,7 +7,7 @@ const App = () => {
 
   const [events, setEvents] = useState([]);
   const [search, setSearch] = useState(""); //state to store user input from search bar, initially empty
-  const [query, setQuery] = useState("Julius Caesar"); //state to store the final input when onSearch, default is Caesar
+  const [query, setQuery] = useState("Julius Caesar"); //state to store the final input when onSearch, could set default is Caesar
 
   useEffect( () => { //[query] at the end of effect hooks are dependency arrays, that the effect depends on
     getEvents(); // useEffect hook is activated to retrieve data from API when query state value changes
