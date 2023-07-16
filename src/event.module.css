@@ -16,13 +16,12 @@
 }
 
 
-
 .header{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-top: 20px;
+    padding-top: 10px;
     margin-bottom: -8px;
     
 }
@@ -36,11 +35,10 @@
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
   
-    
 }
 
 .about{
-    font-size: 20px;
+    font-size: 19px;
     font-family: 'Times New Roman';
     color: white;
 }

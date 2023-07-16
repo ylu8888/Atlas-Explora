@@ -9,6 +9,7 @@ const App = () => {
   const [events, setEvents] = useState([]);
   const [search, setSearch] = useState(""); //state to store user input from search bar, initially empty
   const [query, setQuery] = useState(""); //state to store the final input when onSearch, could set default is Caesar
+  const [showEvents, setShowEvents] = useState(false);
 
   useEffect( () => { //[query] at the end of effect hooks are dependency arrays, that the effect depends on
     getEvents(); // useEffect hook is activated to retrieve data from API when query state value changes
@@ -77,6 +78,7 @@ const App = () => {
     e.preventDefault(); //prevents default form submission which causes page to reload
     setQuery(search);
     setSearch(''); //reset the search after
+    setShowEvents(true);
 
   }
 
@@ -92,13 +94,11 @@ const App = () => {
 
       </form>
 
-      <div className="events"> 
-          <Events
-          key={events} //key prop for proper rendering and prevent browser compile error
-          events={events}
-         />
-       
-      </div>
+      {showEvents ? (
+        <div className="events"> 
+          <Events key={events} events={events} />
+        </div>
+      ) : null}
 
     </div>
 

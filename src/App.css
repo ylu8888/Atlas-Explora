@@ -23,14 +23,16 @@
   height: 20px;
   border: none;
   padding: 10px;
-  font-size: 18px;
+  font-size: 19px;
   border-radius: 18px 0 0 18px;
   border: 1.5px solid #3e1993;
   text-align: center;
   outline: none;
   font-family: 'Times New Roman';
+}
 
-  
+.search-bar::placeholder{
+  font-size: 17px;
 }
 
 .search-btn{
