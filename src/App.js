@@ -5,8 +5,6 @@ import './App.css';
 
 const App = () => {
 
-  const API_KEY = 'g2Zla0EDHh9KPyhxlzKFJw==wDSqVy3Rs7hSqEdb';
-
   const [events, setEvents] = useState([]);
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("Julius Caesar");
@@ -49,7 +47,7 @@ const App = () => {
 
       const response = await axios.get(
         apiUrl, {
-        headers: { 'X-Api-Key': `${API_KEY}` },
+        headers: { 'X-Api-Key': 'g2Zla0EDHh9KPyhxlzKFJw==wDSqVy3Rs7hSqEdb'},
       });
 
       const data = response.data;
