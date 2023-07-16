@@ -9,7 +9,7 @@ const App = () => {
 
   const [events, setEvents] = useState([]);
   const [search, setSearch] = useState("");
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState("Julius Caesar");
 
   useEffect( () => {
     getEvents();
@@ -19,12 +19,41 @@ const App = () => {
 
   const getEvents = async () =>{
     try {
+
+      let apiUrl = '';
+      let intQuery = 0;
+      const hasComma = query.includes(','); //if query has comma, its a formatted date
+
+     if(hasComma){ 
+        const parts = query.replace(/\s/g, "").split(","); //remove whitespace and other chars, split string between commas
+        const dateArray = parts.map(part => parseInt(part)); //each part is mapped onto date array for ex [ 3, 15, -44]
+
+        console.log(dateArray);
+        apiUrl = `https://api.api-ninjas.com/v1/historicalevents?month=${dateArray[0]}&day=${dateArray[1]}&year=${dateArray[2]}`;
+       
+      }
+      else if(isNaN(query)) { //if search input is text/not a number
+        apiUrl = `https://api.api-ninjas.com/v1/historicalevents?text=${query}`;
+      }
+       else { //not a formatted date, but just Either year or month
+        intQuery = parseInt(query);
+
+        if(intQuery > 999 ||  intQuery < 0){ //this is a year
+          apiUrl = `https://api.api-ninjas.com/v1/historicalevents?year=${query}`;
+        }
+        else{
+          apiUrl = `https://api.api-ninjas.com/v1/historicalevents?month=${query}`;
+        }
+        
+      }
+
       const response = await axios.get(
-        `https://api.api-ninjas.com/v1/historicalevents?text=${query}`, {
+        apiUrl, {
         headers: { 'X-Api-Key': `${API_KEY}` },
       });
+
       const data = response.data;
-      console.log(data);
+      //console.log(data);
       setEvents(data);
       
     } catch (error) {
@@ -34,20 +63,25 @@ const App = () => {
 
   const updateSearch = (e) =>{
     setSearch(e.target.value);
-    console.log(search);
+    //console.log(search);
+
   }
   
   const getSearch = (e) =>{
     e.preventDefault();
     setQuery(search);
     setSearch('');
+
   }
 
   return(
+
     <div className="App">
+
       <form className="search-form" onSubmit={getSearch}>
         <input value={search} onChange={updateSearch} className="search-bar" type="text" placeholder="Enter an event or date"/>
         <button className="search-btn" type="submit">Search</button>
+
       </form>
 
       <div className="events"> 
@@ -57,7 +91,9 @@ const App = () => {
          />
        
       </div>
+
     </div>
+
   );
 
 }
