@@ -96,7 +96,10 @@ const App = () => {
 
       {showEvents ? ( //only display events if showEvents is true
         <div className="events"> 
-          <Events key={events} events={events} />
+          <Events 
+          key={events} //key prop for proper rendering and prevent browser compile error
+          events={events} 
+          /> 
         </div>
       ) : null}
 
