@@ -8,6 +8,6 @@ Purpose of Project: To further practice with React and accessing data from APIs
 
 Implemented HTTP requests using Axios to retrieve data from the Historical Events API
 
-Utilized asynchronous API calls (async/await) and Hooks (State/Effect)
+Utilized asynchronous API calls to reduce overall processing time
 
 Used ReactJS, Axios, CSS modules, Javascript (JSX) & deployed to Netlify
