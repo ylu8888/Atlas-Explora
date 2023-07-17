@@ -12,9 +12,9 @@ const App = () => {
   const [showEvents, setShowEvents] = useState(false); //only shows events after user presses search
 
   useEffect( () => { //[query] at the end of effect hooks are dependency arrays, that the effect depends on
-    getEvents(); // useEffect hook is activated to retrieve data from API when query state value changes
+    getEvents(); 
     
-  }, [query]);
+  }, [query]); // useEffect hook is activated to retrieve data from API when query state value changes
 
  
   /*async is important for handling tasks that take time to complete such as retrieving API Data, it allows other parts of code to 
@@ -62,7 +62,7 @@ const App = () => {
       setEvents(data); //Retrieved history data is stored in events state
       
     } catch (error) {
-      console.error('Theres an error: ', error); 
+      console.error('Theres an error: ', error);
     }
   }
 
