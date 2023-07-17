@@ -9,7 +9,7 @@ const Events = (props) =>{
         <div className={style.event}>
             <ul className={style.list}> 
                 {props.events.map((event, index) => { //map over the history events which is an array
-
+                //use index as key since list items don't have unique identifiers
                 let year = "";
                 let month = "";
                 let day = "";
@@ -96,7 +96,7 @@ const Events = (props) =>{
                 const formattedDate = `${month} ${day}, ${year}`;
 
                 return (
-                    <li key={index} className={style.listitem}> //use index as key since list items don't have unique identifiers
+                    <li key={index} className={style.listitem}> 
                     <p className={style.dates}>{formattedDate}</p>
                     {event.event}
 
