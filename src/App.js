@@ -26,15 +26,15 @@ const App = () => {
       let intQuery = 0; 
       const isDate = query.includes('/'); //if query has forward slash, its a formatted date
 
-     if(isDate){ 
-        const parts = query.replace(/\s/g, "").split("/"); //remove whitespace and other chars, split string between commas
+     if(isDate){  
+        const parts = query.replace(/\s/g, "").split("/"); //remove whitespace and other chars, then splits string between commas
         const dateArray = parts.map(part => parseInt(part)); //each part is mapped onto date array for ex [ 3, 15, -44]
 
-        console.log(dateArray);
-        if(dateArray.length == 3){ //its mm/dd/yy
+        //console.log(dateArray);
+        if(dateArray.length == 3){ //if date array has length of 3 its mm/dd/yy
           apiUrl = `https://api.api-ninjas.com/v1/historicalevents?month=${dateArray[0]}&day=${dateArray[1]}&year=${dateArray[2]}`;
         }
-        else if(dateArray.length == 2){ // its just mm/dd
+        else if(dateArray.length == 2){ // if user only enters 2 its just mm/dd
           apiUrl = `https://api.api-ninjas.com/v1/historicalevents?month=${dateArray[0]}&day=${dateArray[1]}`;
         } 
         
