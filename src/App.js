@@ -89,7 +89,7 @@ const App = () => {
       <Header/>
 
       <form className="search-form" onSubmit={getSearch}>
-        <input value={search} onChange={updateSearch} className="search-bar" type="text" placeholder="Ex: Julius Caesar, Battle of Waterloo, 03/15/-44"/>
+        <input value={search} onChange={updateSearch} className="search-bar" type="text" placeholder="Ex: Julius Caesar, Battle of Waterloo, 3/15/-44"/>
         <button className="search-btn" type="submit">Search</button>
 
       </form>

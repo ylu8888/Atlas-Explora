@@ -1,10 +1,8 @@
-
 .App{
   min-height: 100vh;
   background-image: url(atlasexplora.jpg);
   background-size: cover; 
   background-position: center; 
-  
 
 }
 
@@ -32,7 +30,7 @@
 }
 
 .search-bar::placeholder{
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .search-btn{
