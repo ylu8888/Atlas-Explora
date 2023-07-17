@@ -31,7 +31,13 @@ const App = () => {
         const dateArray = parts.map(part => parseInt(part)); //each part is mapped onto date array for ex [ 3, 15, -44]
 
         console.log(dateArray);
-        apiUrl = `https://api.api-ninjas.com/v1/historicalevents?month=${dateArray[0]}&day=${dateArray[1]}&year=${dateArray[2]}`;
+        if(dateArray.length == 3){ //its mm/dd/yy
+          apiUrl = `https://api.api-ninjas.com/v1/historicalevents?month=${dateArray[0]}&day=${dateArray[1]}&year=${dateArray[2]}`;
+        }
+        else if(dateArray.length == 2){ // its just mm/dd
+          apiUrl = `https://api.api-ninjas.com/v1/historicalevents?month=${dateArray[0]}&day=${dateArray[1]}`;
+        } 
+        
        
       }
       else if(isNaN(query)) { //if search input is text/not a number
